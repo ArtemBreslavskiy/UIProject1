@@ -13,7 +13,7 @@ namespace UIProject1.Views
             InitializeComponent();
         }
 
-        private void OnValueChanged(object? sender, RoutedEventArgs e)
+        private void OnButtonClick(object? sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(Celsius.Text))
             {

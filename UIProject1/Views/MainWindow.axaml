@@ -20,10 +20,12 @@
                       RowDefinitions="Auto, Auto">
 
                     <TextBlock Text="Celsius" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" />
-                    <TextBox Grid.Column="1" Grid.Row="0" Width="120" Margin="0, 5" Text="0" Name="Celsius" TextChanged="OnValueChanged"/>
+                    <TextBox Grid.Column="1" Grid.Row="0" Width="120" Margin="0, 5" Text="0" Name="Celsius" />
                     <TextBlock Text="Fahrenheit" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" />
-                    <TextBox Grid.Column="1" Grid.Row="1" Width="120" Margin="0, 5" Text="0" Name="Fahrenheit" IsReadOnly="True"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" Width="120" Margin="0, 10" Text="0" Name="Fahrenheit" IsReadOnly="True"/>
                 </Grid>
+
+                <Button Content="calculate" Click="OnButtonClick" HorizontalAlignment="Center" Width="100" HorizontalContentAlignment="Center"/>
             </StackPanel>
         </Border>
 </Window>
