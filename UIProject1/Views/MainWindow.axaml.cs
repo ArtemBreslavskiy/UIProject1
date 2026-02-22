@@ -13,7 +13,7 @@ namespace UIProject1.Views
             InitializeComponent();
         }
 
-        private void Button_OnClick(object? sender, RoutedEventArgs e)
+        private void OnValueChanged(object? sender, RoutedEventArgs e)
         {
             if (double.TryParse(Celsius.Text, out double C))
             {

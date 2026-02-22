@@ -8,7 +8,7 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="UIProject1"
-        Background="LightGray">
+        Background="White">
 
         <Border HorizontalAlignment="Center" VerticalAlignment="Center">
 			<StackPanel>
@@ -20,13 +20,10 @@
                       RowDefinitions="Auto, Auto">
 
                     <TextBlock Text="Celsius" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" />
-                    <TextBox Grid.Column="1" Grid.Row="0" Margin="0, 5" Text="0" Name="Celsius" />
+                    <TextBox Grid.Column="1" Grid.Row="0" Margin="0, 5" Text="0" Name="Celsius" TextChanged="OnValueChanged"/>
                     <TextBlock Text="Fahrenheit" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" />
-                    <TextBox Grid.Column="1" Grid.Row="1" Margin="0, 5" Text="0" Name="Fahrenheit" />
+                    <TextBox Grid.Column="1" Grid.Row="1" Margin="0, 5" Text="0" Name="Fahrenheit" IsReadOnly="True"/>
                 </Grid>
-
-			    <Button Content="Calculate" Click="Button_OnClick" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="110"/>
             </StackPanel>
         </Border>
-    
 </Window>
