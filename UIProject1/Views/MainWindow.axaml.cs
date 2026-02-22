@@ -15,14 +15,21 @@ namespace UIProject1.Views
 
         private void OnValueChanged(object? sender, RoutedEventArgs e)
         {
-            if (double.TryParse(Celsius.Text, out double C))
+            if (string.IsNullOrEmpty(Celsius.Text))
             {
-                var F = C * (9d / 5d) + 32;
-                Fahrenheit.Text = F.ToString("0.0");
+                Fahrenheit.Text = "-";
             }
             else
             {
-
+                if (double.TryParse(Celsius.Text, out double C))
+                {
+                    var F = C * (9d / 5d) + 32;
+                    Fahrenheit.Text = F.ToString("0.0");
+                }
+                else
+                {
+                    Fahrenheit.Text = "Incorrect input";
+                }
             }
         }
     }
